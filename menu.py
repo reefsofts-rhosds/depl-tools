@@ -15,7 +15,7 @@ run_command(["sudo", "umount", "/depl-share"])
 
 # Mount the remote share
 if run_command(["sudo", "curlftpfs", "depl-share-access:depl-share-access@192.168.1.27:/", "/depl-share"]):
-    #subprocess.run(["clear"])
+    subprocess.run(["clear"])
     print("Depl-Tools")
     print("Global Menu")
     print("Available Actions")
@@ -29,6 +29,7 @@ if run_command(["sudo", "curlftpfs", "depl-share-access:depl-share-access@192.16
         subprocess.run(["python3", "image-creation-tool.py"])
     elif chosen_action == "2":
         print("Launching Image Application Tool")
+        subprocess.run(["python3", "image-application-tools.py"])
     elif chosen_action == "3":
         print("Launching Finnix Shell")
 else:

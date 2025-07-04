@@ -5,6 +5,7 @@
 
 import subprocess
 
+subprocess.run("clear")
 subprocess.run("lsblk")
 disk_id = input("Type in the disk/partition ID given above corresponding to the disk/partition that you want to image: ")
 image_name = input("Type in the name of the image: ")
